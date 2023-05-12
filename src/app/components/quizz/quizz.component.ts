@@ -59,17 +59,26 @@ export class QuizzComponent implements OnInit {
 
   checkResult(answers: string[]) {
 
+    
       const result  = answers.reduce((previous, current, i , arr) => {
-          if(arr.filter(item=> item === previous).length > 
-          arr.filter(item =>  item === current ).length){
+        console.log(previous + " previous")
+        console.log(current + " Current")
+
+        console.log(this.answers)
+        
+        const ocorrenciasDoValorAcumulado = arr.filter(item=> item === previous).length; 
+        
+        const ocorrenciasDoValorCorrente = arr.filter(item =>  item === current ).length; 
+
+          if(ocorrenciasDoValorAcumulado > ocorrenciasDoValorCorrente){
             return previous
           }else{
               return current
           }
-      })
+      }, "Primeiro valor do reduce")
       return result
   }
 
-
+//[A,B,B,A,B]
 
 }
