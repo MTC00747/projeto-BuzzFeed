@@ -42,6 +42,7 @@ export class QuizzComponent implements OnInit {
   buttonPress(value: string) {
     this.answers.push(value)
     this.nextStep();
+    
 
   }
 
@@ -67,7 +68,7 @@ export class QuizzComponent implements OnInit {
         console.log(previous + " previous")
         console.log(current + " Current")
 
-        console.log(this.answers)
+        console.log(this.answers)1
         
         const ocorrenciasDoValorAcumulado = arr.filter(item=> item === previous).length; 
         
