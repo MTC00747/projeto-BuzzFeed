@@ -43,7 +43,6 @@ export class QuizzComponent implements OnInit {
     this.answers.push(value)
     this.nextStep();
     
-
   }
 
   async nextStep() {
